@@ -14,4 +14,4 @@ softdepend: []
 permissions:
   visibleGroupNamesForLp.set:
     description: "Permits usage of this plugin"
-    default: false
+    default: true
