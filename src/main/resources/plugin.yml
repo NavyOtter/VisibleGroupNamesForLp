@@ -1,0 +1,17 @@
+name: VisibleGroupNamesForLp
+version: "1.0"
+api-version: "1.15"
+description: "Displays LuckPerms Prefixes as DisplayName"
+
+author: NavyOtter
+website: https://otter.navy/
+
+main: navy.otter.visiblegroupnamesforlp.VisibleGroupNamesPlugin
+database: false
+depend: [LuckPerms]
+softdepend: []
+
+permissions:
+  visibleGroupNamesForLp.set:
+    description: "Permits usage of this plugin"
+    default: false

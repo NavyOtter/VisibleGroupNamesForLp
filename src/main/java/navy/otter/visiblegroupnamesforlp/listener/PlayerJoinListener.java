@@ -12,13 +12,19 @@ public class PlayerJoinListener implements Listener {
   @EventHandler
   public void onPlayerJoin(PlayerJoinEvent e) {
     Player player = e.getPlayer();
+
+    if(!player.hasPermission("visibleGroupNamesForLp.set")) {
+      return;
+    }
+
     String prefix = LpUtils.getPlayerPrefix(player);
 
     if(prefix == null) {
       return;
     }
+
     String coloredPrefix = ChatColor.translateAlternateColorCodes('&', prefix);
 
-    player.setDisplayName(prefix + player.getName());
+    player.setDisplayName(coloredPrefix + player.getName());
   }
 }
